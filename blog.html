@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MAKEUP FASHIONSTEP - Makeup Website</title>
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <nav>
+      <input type="checkbox" id="menu-toggle" />
+      <div class="container nav-container">
+        <a href="index.html" class="logo">
+          <div>Make<span>up</span></div>
+          <div>Fashion Steps</div>
+        </a>
+
+        <ul class="navlist">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="Services.html">Services</a></li>
+          <li><a href="index.html">Logout</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="nav-icons">
+          <label for="menu-toggle" class="menu-btn"><span class="lnr lnr-menu"></span></label>
+          <span class="lnr lnr-heart"></span>
+          <span class="lnr lnr-cart"></span>
+        </div>
+      </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-text">
+            <h2>Shine With Confidence</h2>
+            <p>Premium beauty & makeup essentials designed for every skin tone. Discover the latest trends, expert tips, and must-have products to enhance your natural beauty.</p>
+            <a href="Services.html" class="btn" style="display: inline-block; text-decoration: none; padding: 12px 22px; background: #e60073; color: white; border-radius: 8px; margin-top: 20px;">Explore Services</a>
+        </div>
+        <img src="https://i.ibb.co/Jp6qq1b/makeup.png" alt="Makeup products" class="hero-img">
+    </section>
+
+    <section id="products" class="products">
+        <h2 class="section-title">Best Sellers</h2>
+
+        <div class="product-grid">
+
+            <div class="product-card">
+                <img src="images/lipstick.png" alt="Matte Lipstick">
+                <h3>Matte Lipstick</h3>
+                <p>₹1900</p>
+                <button onclick="addToCart('Matte Lipstick')">Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <img src="images/Foundation.png" alt="Glow Foundation">
+                <h3>Glow Foundation</h3>
+                <p>₹2400</p>
+                <button onclick="addToCart('Glow Foundation')">Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <img src="images/eyeshadow.png" alt="Pro Eyeshadow Palette">
+                <h3>Pro Eyeshadow Palette</h3>
+                <p>₹2900</p>
+                <button onclick="addToCart('Eyeshadow Palette')">Add to Cart</button>
+            </div>
+
+
+             <div class="product-card">
+                <img src="images/lipstick.png" alt="Matte Lipstick">
+                <h3>Matte Lipstick</h3>
+                <p>₹1000</p>
+                <button onclick="addToCart('Matte Lipstick')">Add to Cart</button>
+            </div>
+
+             <div class="product-card">
+                <img src="images/lipstick.png" alt="Matte Lipstick">
+                <h3>Matte Lipstick</h3>
+                <p>₹1980</p>
+                <button onclick="addToCart('Matte Lipstick')">Add to Cart</button>
+            </div>
+
+             <div class="product-card">
+                <img src="images/lipstick.png" alt="Matte Lipstick">
+                <h3>Matte Lipstick</h3>
+                <p>₹19.99</p>
+                <button onclick="addToCart('Matte Lipstick')">Add to Cart</button>
+            </div>
+
+             <div class="product-card">
+                <img src="images/lipstick.png" alt="Matte Lipstick">
+                <h3>Matte Lipstick</h3>
+                <p>₹1500</p>
+                <button onclick="addToCart('Matte Lipstick')">Add to Cart</button>
+            </div>
+
+             <div class="product-card">
+                <img src="images/lipstick.png" alt="Matte Lipstick">
+                <h3>Matte Lipstick</h3>
+                <p>₹1620</p>
+                <button onclick="addToCart('Matte Lipstick')">Add to Cart</button>
+            </div>
+
+             <div class="product-card">
+                <img src="images/lipstick.png" alt="Matte Lipstick">
+                <h3>Matte Lipstick</h3>
+                <p>₹1105</p>
+                <button onclick="addToCart('Matte Lipstick')">Add to Cart</button>
+            </div>
+
+             <div class="product-card">
+                <img src="images/lipstick.png" alt="Matte Lipstick">
+                <h3>Matte Lipstick</h3>
+                <p>₹1230</p>
+                <button onclick="addToCart('Matte Lipstick')">Add to Cart</button>
+            </div>
+
+             <div class="product-card">
+                <img src="images/lipstick.png" alt="Matte Lipstick">
+                <h3>Matte Lipstick</h3>
+                <p>₹630</p>
+                <button onclick="addToCart('Matte Lipstick')">Add to Cart</button>
+            </div>
+
+
+             <div class="product-card">
+                <img src="images/lipstick.png" alt="Matte Lipstick">
+                <h3>Matte Lipstick</h3>
+                <p>₹1452</p>
+                <button onclick="addToCart('Matte Lipstick')">Add to Cart</button>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="blog" class="blog">
+        <h2 class="section-title">Beauty Blog</h2>
+
+        <div class="blog-grid">
+
+            <div class="blog-card">
+                <img src="images/homepage.png" alt="Makeup Trends 2025">
+                <h3>Top 5 Makeup Trends of 2025</h3>
+                <p>Discover upcoming makeup looks that will dominate 2025. From bold colors to natural glows, stay ahead of the beauty curve with these trending styles.</p>
+                <a href="#" class="read-more">Read More →</a>
+            </div>
+
+            <div class="blog-card">
+                <img src="images/homepage2.png" alt="Skincare Routine">
+                <h3>Perfect Skin-Care Routine</h3>
+                <p>Step-by-step skincare routine recommended by experts. Learn how to achieve radiant, healthy skin with our comprehensive guide to daily and weekly care.</p>
+                <a href="#" class="read-more">Read More →</a>
+            </div>
+
+            <div class="blog-card">
+                <img src="images/homepage3.png" alt="Foundation Shade Guide">
+                <h3>How to Choose Foundation Shade</h3>
+                <p>Find your perfect foundation shade using these expert tips. Master the art of color matching for a flawless, natural-looking complexion.</p>
+                <a href="#" class="read-more">Read More →</a>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 MAKEUP FASHIONSTEP | All Rights Reserved</p>
+    </footer>
+
+    <script src="https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js"></script>
+</body>
+</html>

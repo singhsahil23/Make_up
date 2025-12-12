@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - Makeup Fashion Steps</title>
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <nav>
+      <input type="checkbox" id="menu-toggle" />
+      <div class="container nav-container">
+        <a href="index.html" class="logo">
+          <div>Make<span>up</span></div>
+          <div>Fashion Steps</div>
+        </a>
+
+        <ul class="navlist">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="Services.html">Services</a></li>
+          <li><a href="signin.html">Sign In</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="nav-icons">
+          <label for="menu-toggle" class="menu-btn"><span class="lnr lnr-menu"></span></label>
+          <span class="lnr lnr-heart"></span>
+          <span class="lnr lnr-cart"></span>
+        </div>
+      </div>
+    </nav>
+
+    <div class="auth-container">
+      <div class="auth-form-container">
+        <h1>Sign In</h1>
+        <form id="signinForm" onsubmit="handleSignin(event);">
+          <label for="email" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+          <small style="color: #666; display: block; margin-bottom: 15px;">We'll never share your email with anyone else.</small>
+          
+          <label for="password" class="form-label">Password</label>
+          <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+          
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="remember">
+            <label class="form-check-label" for="remember">Remember me</label>
+          </div>
+          
+          <button type="submit" class="btn-primary">Sign In</button>
+          <a href="index.html" class="btn-danger">Cancel</a>
+          <p style="text-align: center; margin-top: 15px; color: #666;">
+            Don't have an account? <a href="signup.html" style="color: #e60073;">Sign Up</a>
+          </p>
+          <div style="text-align: center; margin-top: 20px; padding-top: 20px; border-top: 1px solid #ffe3f0;">
+            <a href="logout.html" style="color: #e60073; text-decoration: none; font-weight: 600;">Logout</a>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <footer>
+      <p>© 2025 MAKEUP FASHIONSTEP | All Rights Reserved</p>
+    </footer>
+
+    <script src="https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js"></script>
+    <script>
+      function handleSignin(event) {
+        event.preventDefault();
+        
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+        
+        var users = JSON.parse(localStorage.getItem('users') || '[]');
+        
+        var user = users.find(function(u) {
+          return u.email === email && u.password === password;
+        });
+        
+        if (user) {
+          alert('Login successfully! Redirecting to blog page...');
+          
+          sessionStorage.setItem('currentUser', JSON.stringify(user));
+          
+          window.location.href = 'blog.html';
+        } else {
+          alert('Login failed! Email or password does not match. Please try again.');
+        }
+        
+        return false;
+      }
+    </script>
+  </body>
+</html>
